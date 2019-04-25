@@ -1,0 +1,23 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': post.loveIts > 0,
+                'list-group-item-danger': post.loveIts < 0,
+                'flex-column align-items-start': true}">
+
+    <!-- Post List Item -->
+    <div [ngStyle]="{color: getColor()}">
+        <!-- Header -->
+        <div class="d-flex w-100 justify-content-between">
+            <h4>{{ post.title }}</h4>
+            <span>{{ post.createdAt | date: 'short' }}</span>
+        </div>
+
+        <!-- Content -->
+        <p>{{ post.content }}</p>
+
+        <!-- CTA Like | Don't Like -->
+        <div id="cta-wrapper">
+            <button class="btn btn-success" [disabled]="!isAuth" (click)="loveIt()">Love it!</button>
+            <button class="btn btn-danger" [disabled]="!isAuth" (click)="dontLoveIt()">Don't love it!</button>
+        </div>
+    </div>
+</li>
