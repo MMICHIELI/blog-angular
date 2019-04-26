@@ -15,9 +15,10 @@
         <p>{{ post.content }}</p>
 
         <!-- CTA Like | Don't Like -->
-        <div id="cta-wrapper">
-            <button class="btn btn-success" [disabled]="!isAuth" (click)="loveIt()">Love it!</button>
-            <button class="btn btn-danger" [disabled]="!isAuth" (click)="dontLoveIt()">Don't love it!</button>
+        <div class="cta-wrapper d-flex">
+            <button class="btn btn-success mr-1" [disabled]="!isAuth" (click)="loveIt()">Love it!</button>
+            <button class="btn btn-danger ml-1" [disabled]="!isAuth" (click)="dontLoveIt()">Don't love
+                it!</button>
         </div>
     </div>
 </li>
