@@ -6,15 +6,15 @@ import { AppComponent } from './app.component';
 import { PostListComponent } from './components/post-list/post-list.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PostListComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        PostListComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
